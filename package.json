@@ -7,7 +7,7 @@
 	"keywords": [ "freecodecamp", "training"],
 	"dependencies": {
 		"express": "^4.14.0",
-		"@freecodecamp": "1.1.0"
+		"freecodecamp": "1.1.0"
 	},
 	"main": "server.js",
 	"scripts": {
