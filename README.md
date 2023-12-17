@@ -55,3 +55,14 @@ Some common licenses for open source projects include MIT and BSD. License infor
 
 Fill the `license` field in the `package.json` file of your project as you find suitable.
 
+
+### Add a Version to Your package.json
+A `version` is one of the required fields of your `package.json` file. This field describes the current version of your project. Here's an example:
+
+```json
+"version": "1.2.0",
+```
+
+Add a `version` to the `package.json` file of your project.
+
+
