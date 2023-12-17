@@ -9,6 +9,10 @@ If you look at the file tree of your project, you will find the `package.json` f
 
 One of the most common pieces of information in this file is the `author` field. It specifies who created the project, and can consist of a string or an object with contact or other details. An object is recommended for bigger projects, but a simple string like the following example will do for this project.
 
+```json 
+"author": "Jane Doe",
+```
+
 Add your name as the author of the project in the `package.json` file.
 
 
@@ -19,6 +23,22 @@ If some day you plan to publish a package to npm, this is the string that should
 
 Regardless of what you plan for your project, a description is definitely recommended. Here's an example:
 
-```"description": "A project that does something awesome",```
+```json
+"description": "A project that does something awesome",
+```
 
 Add a description to the package.json file of your project.
+
+
+### Add Keywords to Your package.json
+The `keywords` field is where you can describe your project using related keywords. Here's an example:
+
+```json
+"keywords": [ "descriptive", "related", "words" ],
+```
+
+As you can see, this field is structured as an array of double-quoted strings.
+
+Add an array of suitable strings to the `keywords` field in the `package.json` file of your project.
+
+One of the keywords should be `"freecodecamp"`.
