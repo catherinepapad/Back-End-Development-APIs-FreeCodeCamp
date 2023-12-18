@@ -34,7 +34,7 @@ app.get("/",function(GET, res){
 app.get("/json", function(GET, res){
     if (process.env.MESSAGE_STYLE==="uppercase"){
         res.json({"message": "HELLO JSON"});
-    } else if (process.env.MESSAGE_STYLE==="lowercase"){
+    } else {
         res.json({"message": "Hello json"});
     }
 });
