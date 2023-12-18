@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+require('dotenv').config();   // Task 6
 
 
 // Task 1
@@ -24,8 +25,19 @@ app.get("/",function(GET, res){
 
 
 // Task 5
+// app.get("/json", function(GET, res){
+//     res.json({"message": "Hello json"});
+// });
+
+
+// Task 6
 app.get("/json", function(GET, res){
-    res.json({"message": "Hello json"});
+    let style = process.env.MESSAGE_STYLE;
+    if (style==="uppercase"){
+        res.json({"message": "HELLO JSON"});
+    } else if (style==="lowercase"){
+        res.json({"message": "Hello json"});
+    }
 });
 
 
