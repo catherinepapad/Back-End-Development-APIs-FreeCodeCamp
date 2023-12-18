@@ -13,7 +13,7 @@ console.log("Hello World");
 
 
 //Task 4
-app.use("/public",express.static(__dirname));
+app.use("/public",express.static(__dirname + "/public"));
 
 
 
