@@ -9,15 +9,6 @@ app.use("/", (req, res, next) => {
     next();
 });
 
-// app.use((req, res, next) => {
-
-//     let string = `${req.method} ${req.path} - ${req.ip}`
-//     console.log(req.method + " " + req.path + " - " + req.ip);
-//     //console.log(string) 
-      
-//      next();
-   
-//    });
 
 // Task 1
 console.log("Hello World");
@@ -57,27 +48,13 @@ app.get("/json", function(GET, res){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Task 8
+app.get("/now", function(req, res, next) {
+    next();
+  }, function(req, res) {
+    let time = new Date().toString();
+    res.json({"time": time});
+  });
 
 
 
