@@ -80,7 +80,11 @@ app.get("/name", (req, res) => {
 
 
 
-
+// Task 12
+app.post("/name", (req, res) => {
+    let name = req.body.first + " " + req.body.last;
+    res.json({"name": name});
+});
 
 
  module.exports = app;
