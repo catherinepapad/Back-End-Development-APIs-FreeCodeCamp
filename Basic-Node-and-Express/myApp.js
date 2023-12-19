@@ -32,10 +32,12 @@ app.get("/",function(GET, res){
 
 // Task 6
 app.get("/json", function(GET, res){
-    if (process.env.MESSAGE_STYLE==="uppercase"){
-        res.json({"message": "HELLO JSON"});
+    let message = "Hello json";
+    
+    if (process.env.MESSAGE_STYLE === "uppercase"){
+        res.json({"message": message.toUpperCase()});
     } else {
-        res.json({"message": "Hello json"});
+        res.json({"message": message});
     }
 });
 
