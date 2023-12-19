@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
-require('dotenv').config();   // Task 6
+require('dotenv').config();                 // Task 6
+let bodyParser = require('body-parser');    // Task 11
 
 
 // Task 7
@@ -8,6 +9,13 @@ app.use("/", (req, res, next) => {
     console.log(req.method + " " + req.path + " - " + req.ip);
     next();
 });
+
+
+
+// Task 11
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 
 
 // Task 1
