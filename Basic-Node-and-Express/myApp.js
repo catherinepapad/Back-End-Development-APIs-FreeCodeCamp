@@ -3,6 +3,22 @@ let app = express();
 require('dotenv').config();   // Task 6
 
 
+// Task 7
+app.use("/", (req, res, next) => {
+    console.log(req.method + " " + req.path + " - " + req.ip);
+    next();
+});
+
+// app.use((req, res, next) => {
+
+//     let string = `${req.method} ${req.path} - ${req.ip}`
+//     console.log(req.method + " " + req.path + " - " + req.ip);
+//     //console.log(string) 
+      
+//      next();
+   
+//    });
+
 // Task 1
 console.log("Hello World");
 
@@ -38,6 +54,7 @@ app.get("/json", function(GET, res){
         res.json({"message": "Hello json"});
     }
 });
+
 
 
 
