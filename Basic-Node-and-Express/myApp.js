@@ -57,7 +57,11 @@ app.get("/now", function(req, res, next) {
 });
 
 
-
+// Task 9
+app.get("/:word/echo", (req, res) => {
+    let word = req.params.word;
+    res.json({"echo": word});
+  });
 
 
 
