@@ -50,15 +50,11 @@ app.get("/json", function(GET, res){
 
 // Task 8
 app.get("/now", function(req, res, next) {
+    req.time = new Date().toString();
     next();
   }, function(req, res) {
-    let time = new Date().toString();
-    res.json({"time": time});
-  });
-
-
-
-
+    res.json({"time": req.time});
+});
 
 
 
