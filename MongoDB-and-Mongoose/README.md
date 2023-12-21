@@ -17,3 +17,5 @@ When you are done, connect to the database by calling the `connect` method withi
 ```javascript
 mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true });
 ```
+
+**Edit**: The cloned repo had `"mongoose": "^5.13.21"` in `package.json`. Replaced with `"mongoose": "^5.11.15"`.
