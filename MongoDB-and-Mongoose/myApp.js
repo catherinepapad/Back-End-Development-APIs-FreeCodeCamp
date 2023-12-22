@@ -131,12 +131,19 @@ const removeManyPeople = (done) => {
 };
 
 
-
-
+// Task 12
 const queryChain = (done) => {
   const foodToSearch = "burrito";
 
-  done(null /*, data*/);
+  Person.find({food: foodToSearch})
+        .sort({name: 1})              //1 for ascending	order and -1 for descending order.
+        .limit(2)                     //return array which has 2 items in it.
+        .select({age: 0})             //0 means false and thus hide age property.
+        .exec((err, data) => {
+          if (err) return done(err);
+          // if (err) return console.error(err);
+          done(null, data);
+        });
 };
 
 /** **Well Done !!**
