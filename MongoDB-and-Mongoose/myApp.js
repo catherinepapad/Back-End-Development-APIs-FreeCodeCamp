@@ -47,7 +47,6 @@ const createManyPeople = (arrayOfPeople, done) => {
 
 
 // Task 5
-let personName = 'Kylie Turner';
 const findPeopleByName = (personName, done) => {
   Person.find({name: personName},  (err, data) => {
     if (err) return done(err);
@@ -57,12 +56,17 @@ const findPeopleByName = (personName, done) => {
 };
 
 
-
-
-
+// Task 6
 const findOneByFood = (food, done) => {
-  done(null /*, data*/);
+  Person.findOne({favoriteFoods: food},  (err, data) => {
+    if (err) return done(err);
+    // if (err) return console.error(err);
+    done(null, data);
+  });
 };
+
+
+
 
 const findPersonById = (personId, done) => {
   done(null /*, data*/);
