@@ -119,15 +119,19 @@ const removeById = (personId, done) => {
 };
 
 
-
-
-
-
+// Task 11
 const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
 
-  done(null /*, data*/);
+  Person.remove({name: nameToRemove}, (err, data) => {
+    if (err) return done(err);
+    // if (err) return console.error(err);
+    done(null, data);
+  });
 };
+
+
+
 
 const queryChain = (done) => {
   const foodToSearch = "burrito";
