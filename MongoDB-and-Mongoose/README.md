@@ -110,6 +110,13 @@ Modify the `findAndUpdate` function to find a person by `Name` and set the perso
 **Note**: You should return the updated document. To do that, you need to pass the options document `{ new: true }` as the 3rd argument to `findOneAndUpdate()`. By default, these methods return the unmodified object.
 
 
+### Delete One Document Using model.findByIdAndRemove
+`findByIdAndRemove` and `findOneAndRemove` are like the previous update methods. They pass the removed document to the db. As usual, use the function argument `personId` as the search key.
+
+Modify the `removeById` function to delete one person by the person's `_id`. You should use one of the methods `findByIdAndRemove()` or `findOneAndRemove()`.
+
+
+
 
 
 
