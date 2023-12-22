@@ -125,13 +125,13 @@ router.post("/create-many-people", function (req, res, next) {
         console.log("Missing `done()` argument");
         return next({ message: "Missing callback argument" });
       }
-      Person.find({}, function (err, pers) {
-        if (err) {
-          return next(err);
-        }
-        res.json(pers);
-        Person.remove().exec();
-      });
+      // Person.find({}, function (err, pers) {
+      //   if (err) {
+      //     return next(err);
+      //   }
+      //   res.json(pers);
+      //   Person.remove().exec();
+      // });
     });
   });
 });
