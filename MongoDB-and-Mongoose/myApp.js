@@ -76,13 +76,22 @@ const findPersonById = (personId, done) => {
 };
 
 
-
-
+// Task 8
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
-
-  done(null /*, data*/);
+  Person.findById(personId, (err, data) => {
+    if (err) return done(err);
+    data.favoriteFoods.push(foodToAdd);
+    data.save(function(err, data) {
+      if (err) return done(err);
+      // if (err) return console.error(err);
+      done(null, data);
+    });
+  });
 };
+
+
+
 
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
